@@ -6,7 +6,7 @@ class Sana:
         
     def lataa_sanat(self, tiedoston_nimi):
         try:
-            with open(tiedoston_nimi) as tiedosto:
+            with open(tiedoston_nimi, encoding="utf-8") as tiedosto:
                 return [rivi.strip() for rivi in tiedosto.readlines() if rivi.strip()]
         except FileNotFoundError:
             print(f"Virhe: Tiedostoa {tiedoston_nimi} ei löytynyt. Käytetään oletussanoja.")
