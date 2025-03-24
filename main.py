@@ -99,6 +99,8 @@ class Peli:
             print("Oikea sana oli:", self.sana)
             return True
         elif self.näytettävä_sana() == self.sana:
+            print(self.hirsipuu_kuvat[self.vaarat])
+            print(self.näytettävä_sana())
             print("Voitit pelin!")
             return True
         return False
